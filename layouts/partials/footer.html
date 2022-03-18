@@ -1,0 +1,28 @@
+<footer class="footer">
+  <div class="footer-logos">
+    {{ $image := resources.Get "img/iso.svg" | fingerprint }}
+    <img src="{{ .Site.Params.cdnURL }}{{ $image.RelPermalink }}">
+  </div>
+
+  <div>
+    © {{ now.Year }} {{ $.Site.Copyright }}
+
+    <span class="hidden-phone">
+      hosted at {{ $.Site.Params.location }}
+    </span>
+
+    <a class="footer-nav-a" href="mailto:{{ $.Site.Params.email }}">{{ $.Site.Params.email }}</a>
+  </div>
+
+  <nav class="footer-nav">
+    {{ range $.Site.Menus.footer }}
+       <a class="footer-nav-a" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+    {{ end }}
+
+    {{ with $.File }}
+      <a class="footer-nav-a" href='{{ $.Site.Params.editURL }}{{ replace $.File.Dir "\\" "/" }}{{ .LogicalName }}' target="blank">
+        {{ T "editThisPage" }}
+      </a>
+    {{ end }}
+  </nav>
+</footer>

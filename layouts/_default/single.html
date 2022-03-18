@@ -1,0 +1,49 @@
+{{ define "main" }}
+  {{ $hero := "" }}
+  {{ if .Params.Hero }}
+    {{ $src := .Params.Hero }}
+    {{ $image := resources.Get $src | fingerprint }}
+    {{ $hero = $image.RelPermalink }}
+  {{ end }}
+
+  {{ $icon := "" }}
+  {{ $iconWidth := 0 }}
+  {{ $iconHeight := 0 }}
+  {{ if .Params.Icon }}
+    {{ $url := urls.Parse .Params.Icon }}
+    {{ $src := $url.Path }}
+    {{ $iconWidth = index $url.Query.width 0 }}
+    {{ $iconHeight = index $url.Query.width 0 }}
+    {{ $image := resources.Get $src | fingerprint }}
+    {{ $icon = $image.RelPermalink }}
+  {{ end }}
+
+  <div class="post">
+    <div
+      class='post-title-wrapper {{ cond (eq $hero "") "post-title-wrapper-blank" "post-title-wrapper-hero" }}'
+      {{ with $hero }} style="background-image: url('{{ $.Site.Params.cdnURL }}{{ . }}')" {{ end }}
+    >
+      {{ with $icon }}
+      <p class="post-title-icon">
+        <img width="{{ $iconWidth }}" height="{{ $iconHeight }}" src="{{ $.Site.Params.cdnURL }}{{ . }}">
+      </p>
+      {{ end }}
+
+      <h1 class="post-title">
+        {{ .Title | markdownify }}
+      </h1>
+
+      {{ with .Params.Aux }}
+        <p class="post-title-aux">{{ . }}</p>
+      {{ end }}
+    </div>
+
+    <div class="post-content">
+      {{- with .Content -}}
+      <div>
+        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">#</a> ${3}` | safeHTML }}
+      </div>
+      {{- end -}}
+    </div>
+  </div>
+{{ end }}

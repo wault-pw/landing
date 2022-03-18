@@ -1,0 +1,85 @@
+.post {
+  margin: 0 auto;
+  max-width: var(--post-max-width);
+  padding: 0 var(--page-gap);
+
+  @include phone {
+    max-width: var(--post-mobile-max-width);
+  }
+}
+
+.post-title-wrapper {
+  // padding used here for hero background image
+  padding: 30px 0 15px;
+  margin: 0 auto 20px;
+
+  @include phone {
+    padding: 15px 0 0;
+    max-width: 500px;
+    background-image: none !important;
+    text-align: center;
+  }
+}
+
+.post-title-wrapper-blank {
+  text-align: center;
+  max-width: 600px;
+
+  .post-title {
+    padding: 0 30px;
+  }
+}
+
+.post-title-wrapper-hero {
+  padding-right: 300px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 300px;
+
+  @include phone {
+    padding-right: 0;
+    background-image: none !important;
+  }
+}
+
+.post-title {
+  font-size: calc(clamp(2rem, 3.3vw, 2.6rem));
+  font-weight: normal;
+  margin-bottom: .35em;
+  word-break: break-word;
+}
+
+.post-title-icon {
+  margin-bottom: 5px;
+}
+
+.post-title-aux {
+  color: var(--heading-color);
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.post-center {
+  text-align: center;
+
+  blockquote {
+    margin-left: auto;
+    margin-right: auto;
+
+    p:before {
+      display: none;
+    }
+  }
+}
+
+.hanchor {
+  color: var(--accent) !important;
+  text-decoration: none;
+  margin-left: 6px;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+h1:hover a, h2:hover a, h3:hover a, h4:hover a {
+  visibility: visible;
+}

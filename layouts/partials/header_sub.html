@@ -1,0 +1,51 @@
+<header class="header-sub">
+  <h6 class="mb-0">
+    ¶&nbsp;{{ .FirstSection.Title }}
+  </h6>
+
+  <nav
+    id="mobile_header_sub"
+    class="header-nav header-nav-mobile"
+    itemscope="itemscope"
+    itemtype="https://www.schema.org/SiteNavigationElement"
+  >
+    {{ $currentPage := . }}
+    {{ range .FirstSection.Pages }}
+    <a
+      class="header-nav-a header-nav-mobile-a active-{{ eq $currentPage . }}"
+      href="{{ .Permalink }}"
+      itemprop="url"
+    >
+      <span itemprop="name">{{ .LinkTitle }}</span>
+    </a>
+    {{ end }}
+
+    <a data-toggle="#mobile_header_sub"
+       class="header-nav-a big justify-center header-nav-mobile-a"
+       href="javascript:"
+    >
+      <i class="icon-cancel"></i>
+    </a>
+  </nav>
+
+  <nav class="header-nav justify-end hidden-desktop">
+    <a data-toggle="#mobile_header_sub"
+       class="header-nav-a big"
+       href="javascript:"
+    >
+      <i class="icon-ellipsis-vert"></i>
+    </a>
+  </nav>
+
+  <nav class="header-nav justify-end hidden-phone">
+    {{ $currentPage := . }}
+    {{ range .FirstSection.Pages }}
+      <a
+        class="header-nav-a active-{{ eq $currentPage . }}"
+        href="{{ .Permalink }}"
+      >
+        {{ .LinkTitle }}
+      </a>
+    {{ end }}
+  </nav>
+</header>

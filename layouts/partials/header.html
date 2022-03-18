@@ -1,0 +1,89 @@
+{{ $logo := resources.Get "img/asterisk.svg" | fingerprint }}
+
+<div class="header-wrapper header-background">
+  <header class="header">
+    <a class="header-logo hidden-phone" href="/">
+      <img
+        src="{{ .Site.Params.cdnURL }}{{ $logo.RelPermalink }}"
+        alt="{{ $.Site.Title }}"
+      >
+    </a>
+
+    <nav
+      id="mobile_header_nav"
+      class="header-nav header-nav-mobile header-background"
+      itemscope="itemscope"
+      itemtype="https://www.schema.org/SiteNavigationElement"
+    >
+      {{ $currentPage := . }}
+      {{ range $.Site.Menus.header }}
+      <a href="{{ .URL | absLangURL }}"
+         class="header-nav-a header-nav-mobile-a active-{{ hasPrefix $currentPage.RelPermalink .URL }}"
+         itemprop="url"
+      >
+        <span itemprop="name">{{ .Name }}</span>
+      </a>
+      {{ end }}
+
+      <a
+        class="header-nav-a header-nav-mobile-a"
+        href="{{ .Site.Params.loginURL }}"
+        itemprop="url"
+      >
+        <span itemprop="name">{{ T "login" }}</span>
+      </a>
+
+      <a
+        class="header-nav-a header-nav-mobile-a"
+        href="{{ .Site.Params.joinURL }}"
+        itemprop="url"
+      >
+        <span itemprop="name">{{ T "join" }}</span>
+      </a>
+
+      <a data-toggle="#mobile_header_nav"
+         class="header-nav-a  big justify-center header-nav-mobile-a"
+         href="javascript:"
+      >
+        <i class="icon-cancel"></i>
+      </a>
+    </nav>
+
+    <nav class="header-nav hidden-desktop">
+      <a class="header-nav-a" href="javascript:" data-toggle="#mobile_header_nav">
+        {{ T "menu" }}
+      </a>
+    </nav>
+
+    <div class="hidden-desktop d-flex justify-center">
+      <a class="header-logo" href="/">
+        <img src="{{ .Site.Params.cdnURL }}{{ $logo.RelPermalink }}" alt="{{ $.Site.Title }}">
+      </a>
+    </div>
+
+    <nav class="header-nav justify-center hidden-phone">
+      {{ $currentPage := . }}
+      {{ range $.Site.Menus.header }}
+      <a href="{{ .URL | absLangURL }}" class="header-nav-a active-{{ hasPrefix $currentPage.RelPermalink .URL }}">
+        {{ .Name }}
+      </a>
+      {{ end }}
+    </nav>
+
+    <nav class="header-nav justify-end">
+      <a
+        class="header-nav-a"
+        href="{{ .Site.Params.loginURL }}"
+      >
+        {{ T "login" }}
+      </a>
+
+      <a
+        class="hidden-phone button"
+        href="{{ .Site.Params.joinURL }}"
+      >
+        {{ T "join" }}
+      </a>
+    </nav>
+  </header>
+</div>

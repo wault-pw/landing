@@ -1,0 +1,19 @@
+{{ define "main"}}
+<div class="content">
+  <div class="post">
+    <div class="post-title-wrapper post-title-wrapper-blank mb-0">
+      <p class="post-title-icon">
+        {{ $image := resources.Get "img/404.jpg" | fingerprint }}
+        <img width="65" height="76" src="{{ $image.Permalink }}">
+      </p>
+      <h1 class="post-title">
+        {{ T "notFound_h1" }}
+      </h1>
+
+      <p class="post-title-aux mb-0">
+        {{ T "notFound_p1" }}
+      </p>
+    </div>
+  </div>
+</div>
+{{ end }}

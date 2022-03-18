@@ -1,0 +1,39 @@
+.justify-center {
+  justify-content: center!important;
+}
+
+.justify-end {
+  justify-content: flex-end!important;
+}
+
+.hidden-phone {
+  @include phone {
+    display: none!important;
+  }
+}
+
+.grow {
+  flex-grow: 1!important;
+}
+
+.d-flex {
+  display: flex!important;
+}
+
+.mb-0 {
+  margin-bottom: 0!important;
+}
+
+.bb-0 {
+  border-bottom: none!important;
+}
+
+.big {
+  font-size: 1.3em;
+}
+
+.hidden-desktop {
+  @include desktop {
+    display: none!important;
+  }
+}

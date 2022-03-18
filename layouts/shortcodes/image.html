@@ -1,0 +1,10 @@
+{{ if .Get "src" }}
+  {{ $src := .Get "src" }}
+  {{ $image := resources.Get $src | fingerprint }}
+  <p class="shortcode-image {{ with .Get "class"}}{{ . }}{{ else -}} image-wild {{- end }}">
+    <img
+      src="{{ .Site.Params.cdnURL }}{{ $image.RelPermalink }}"
+      {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }}
+    >
+  </p>
+{{ end }}

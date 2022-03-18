@@ -1,0 +1,62 @@
+defaultContentLanguage: ru
+minifyOutput: true
+enableRobotsTXT: true
+disableKinds:
+  - section
+  - taxonomy
+  - term
+  - RSS
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  editURL: https://github.com/wault-pw/landing/blob/master/content/
+
+languages:
+  en:
+    baseURL: /
+    cdnURL: ""
+    yandexMetrics:
+    googleAnalytics:
+    email: support@example.com
+
+  ru:
+    baseURL: /
+    cdnURL: ""
+    yandexMetrics:
+    googleAnalytics:
+    email: support@example.com
+    dnsPrefetch: http://a.lvh.me:1313,http://b.lvh.me:1313
+    preconnect: http://b.lvh.me:1313,http://c.lvh.me:1313
+    loginURL: http://localhost:3000/
+    joinURL: http://localhost:3000/#/join
+    title: Wault менеджер паролей
+    copyright: Wault
+    location: Yandex.Cloud
+    menu:
+      header:
+        - name: Возможности
+          weight: 20
+          url: /features/overview/
+        - name: Безопасность
+          weight: 40
+          url: /security/overview/
+        - name: Исходный код
+          weight: 50
+          url: /source/
+      footer:
+        - weight: 10
+          name: Правила пользования
+          url: /legal/terms/
+        - weight: 20
+          name: Конфидециальность
+          url: /legal/privacy/
+        - weight: 30
+          name: GitHub
+          url: https://github.com/wault-pw
+        - weight: 40
+          name: Статус
+          url: https://stats.uptimerobot.com/4Dn8VizL95

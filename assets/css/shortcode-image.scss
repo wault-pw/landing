@@ -1,0 +1,9 @@
+.image-wild {
+  margin-left: calc(var(--page-gap) * -1);
+  margin-right: calc(var(--page-gap) * -1);
+
+  @include desktop {
+    margin-left: calc(var(--page-gap) * -3);
+    margin-right: calc(var(--page-gap) * -3);
+  }
+}
