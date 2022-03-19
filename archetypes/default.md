@@ -6,4 +6,3 @@ icon: ""
 date: {{ .Date }}
 draft: true
 ---
-
