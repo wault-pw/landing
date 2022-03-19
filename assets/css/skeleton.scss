@@ -114,6 +114,7 @@ blockquote {
 
 sup {
   margin-left: 3px;
+  font-size: 0.7em;
 }
 
 table {
@@ -200,10 +201,17 @@ hr {
   margin: 20px 0;
 }
 
+/**
+ * Footnotes
+ */
 .footnotes {
   ol {
     li p {
       margin-bottom: 0;
     }
   }
+}
+
+.footnote-backref {
+  text-decoration: none;
 }
