@@ -4,7 +4,7 @@
     <div class="post-title-wrapper post-title-wrapper-blank mb-0">
       <p class="post-title-icon">
         {{ $image := resources.Get "img/404.jpg" | fingerprint }}
-        <img width="65" height="76" src="{{ $image.Permalink }}">
+        <img width="65" height="76" src="{{ .Site.Params.cdnURL }}{{ $image.RelPermalink }}">
       </p>
       <h1 class="post-title">
         {{ T "notFound_h1" }}
