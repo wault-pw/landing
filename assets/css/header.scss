@@ -35,7 +35,7 @@
 
 .header-nav-a {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--heading-color);
 
   &:hover {
@@ -44,7 +44,7 @@
 
   &.active-true {
     pointer-events: none;
-    color: var(--footer-color);
+    color: var(--header-nav-active-color);
   }
 }
 

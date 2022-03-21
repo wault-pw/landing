@@ -9,7 +9,7 @@
   padding: 0 var(--page-gap);
   margin: 0 auto;
   max-width: var(--post-max-width);
-  color: var(--footer-color);
+  color: var(--header-nav-active-color);
 
   @include phone {
     text-align: center;
@@ -18,7 +18,7 @@
 }
 
 .footer-nav-a {
-  color: var(--footer-color);
+  color: var(--header-nav-active-color);
   margin-right: 5px;
   text-decoration: none;
 
