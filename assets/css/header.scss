@@ -44,8 +44,12 @@
 
   &.active-true {
     pointer-events: none;
-    opacity: .35;
+    color: var(--footer-color);
   }
+}
+
+.header-sub-wrapper {
+  border-bottom: var(--border-color) 1px solid;
 }
 
 .header-sub {
@@ -54,7 +58,6 @@
   grid-template-columns: auto 1fr;
   align-items: center;
   height: var(--header-height);
-  border-bottom: var(--border-color) 1px solid;
   padding: 0 var(--page-gap);
   margin: 0 auto;
   max-width: var(--post-max-width);

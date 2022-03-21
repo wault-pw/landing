@@ -4,6 +4,7 @@
   <p class="shortcode-image {{ with .Get "class"}}{{ . }}{{ else -}} image-wild {{- end }}">
     <img
       src="{{ .Site.Params.cdnURL }}{{ $image.RelPermalink }}"
+      class="{{ with .Get "shadow"}}shadow{{- end }}"
       {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }}
     >
   </p>
