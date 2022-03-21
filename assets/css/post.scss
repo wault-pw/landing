@@ -78,6 +78,10 @@
   margin-left: 6px;
   vertical-align: middle;
   visibility: hidden;
+
+  &:before {
+    content: "#";
+  }
 }
 
 h1:hover a, h2:hover a, h3:hover a, h4:hover a {

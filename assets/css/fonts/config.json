@@ -17,6 +17,12 @@
       "css": "cancel",
       "code": 59392,
       "src": "mfglabs"
+    },
+    {
+      "uid": "c1306ee779029bed4f5a2b9b4f5c79e8",
+      "css": "sun-inv",
+      "code": 59394,
+      "src": "meteocons"
     }
   ]
 }

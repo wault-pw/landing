@@ -2,6 +2,10 @@ body, html {
   background: var(--background);
   color: var(--color);
   font-size: 19px;
+  // height of sticky header, to fix offset
+  // with sticky header + ancor navigation
+  scroll-padding-top: calc(var(--header-height) * 1.2);
+
 }
 
 body {
@@ -74,12 +78,13 @@ pre {
 }
 
 blockquote {
-  color: var(--accent);
+  color: var(--primary);
   margin: 20px 0;
   word-break: break-word;
 
   a {
-    color: var(--accent);
+    color: var(--primary);
+    text-decoration: underline;
   }
 
   @include desktop {
@@ -99,15 +104,20 @@ blockquote {
   }
 
   p:before {
-    content: '>';
+    content: '\e802';
+    font-family: "fontello";
     display: block;
     position: absolute;
-    left: calc(var(--page-gap) / -1.5);
+    left: -1.3em;
     color: var(--accent);
+
+    @include phone {
+      left: -1.1em;
+    }
   }
 
   .footnote-ref {
-    color: var(--accent);
+    color: var(--primary);
   }
 }
 
@@ -126,12 +136,12 @@ table {
 table,
 th,
 td {
-  border: 1px dashed var(--accent);
+  border: 1px dashed var(--primary);
   padding: 10px;
 }
 
 th {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 ul,
@@ -152,7 +162,7 @@ ul {
     content: "#";
     position: absolute;
     right: calc(100% + 10px);
-    color: var(--accent);
+    color: var(--primary);
     display: inline-block;
     text-align: right;
   }
