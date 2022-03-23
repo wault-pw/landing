@@ -8,8 +8,8 @@ build:
 		--build-arg HUGO_DISABLELANGUAGES=cn \
 		\
 		--build-arg HUGO_LANGUAGES_EN_email=support@wault.pw \
-		--build-arg HUGO_LANGUAGES_EN_yandexMetrics=87936217 \
-		--build-arg HUGO_LANGUAGES_EN_googleAnalytics=G-93PBXT39JQ \
+		--build-arg HUGO_LANGUAGES_EN_yandexMetrics=88004695 \
+		--build-arg HUGO_LANGUAGES_EN_googleAnalytics=G-YF1K8JKP40 \
 		--build-arg HUGO_LANGUAGES_EN_cdnURL=https://d05331.wault.pw \
 		--build-arg HUGO_LANGUAGES_EN_baseURL=https://www.wault.pw \
 		--build-arg HUGO_LANGUAGES_EN_dnsPrefetch=https://d05331.wault.pw,https://cloud.wault.pw,https://mc.yandex.com,https://www.googletagmanager.com \
