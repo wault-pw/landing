@@ -43,7 +43,7 @@ languages:
           url: /source/
       footer:
         - weight: 10
-          name: Terms of service
+          name: Terms
           url: /legal/terms/
         - weight: 20
           name: Privacy
