@@ -14,6 +14,10 @@ markup:
 
 params:
   editURL: https://github.com/wault-pw/landing/blob/master/content/
+  dnsPrefetch: http://a.lvh.me:1313,http://b.lvh.me:1313
+  preconnect: http://b.lvh.me:1313,http://c.lvh.me:1313
+  loginURL: http://localhost:3000/
+  joinURL: http://localhost:3000/#/join
 
 languages:
   en:
@@ -21,8 +25,35 @@ languages:
     cdnURL: ""
     yandexMetrics:
     googleAnalytics:
-    email: support@example.com
-    description:
+    email: support@wault.pw
+    title: Wault password manager
+    description: Wault can store passwords and other confidential data from credit card PIN codes to private notes. You can get access to your data from anywhere and from any device, including your smartphone. You don’t need to download, install, and update anything. And with offline version of Wault, your most precious data will be at hand all the time, even when you don’t have Internet connection.
+    copyright: Wault
+    location: AWS
+    menu:
+      header:
+        - name: Features
+          weight: 20
+          url: /features/overview/
+        - name: Security
+          weight: 40
+          url: /security/overview/
+        - name: Source code
+          weight: 50
+          url: /source/
+      footer:
+        - weight: 10
+          name: Terms of service
+          url: /legal/terms/
+        - weight: 20
+          name: Privacy
+          url: /legal/privacy/
+        - weight: 30
+          name: GitHub
+          url: https://github.com/wault-pw
+        - weight: 40
+          name: Status
+          url: http://stats.uptimerobot.com/4Dn8VizL95
 
   ru:
     baseURL: /
@@ -31,10 +62,6 @@ languages:
     googleAnalytics:
     email: support@example.com
     description: Wault может хранить пароли и любые другие конфиденциальные данные, от PIN-кодов кредитных карт до личных заметок. Вы можете получить доступ к своим данным из любого места и с любого устройства, включая ваш смартфон. Нечего скачивать, устанавливать и обновлять. А с офлайн-версией Wault ваши самые ценные данные всегда под рукой, даже когда нет подключения к Интернет.
-    dnsPrefetch: http://a.lvh.me:1313,http://b.lvh.me:1313
-    preconnect: http://b.lvh.me:1313,http://c.lvh.me:1313
-    loginURL: http://localhost:3000/
-    joinURL: http://localhost:3000/#/join
     title: Wault менеджер паролей
     copyright: Wault
     location: Yandex.Cloud

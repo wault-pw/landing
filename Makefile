@@ -5,8 +5,18 @@ VERSION:=$(shell cat VERSION)
 build: export TAG=$(VERSION)
 build:
 	docker build --no-cache -f ./Dockerfile -t ${REGISTRY_NAME}:${TAG} \
-		--build-arg VERSION=${VERSION} \
-		--build-arg HUGO_DISABLELANGUAGES=en \
+		--build-arg HUGO_DISABLELANGUAGES=cn \
+		\
+		--build-arg HUGO_LANGUAGES_EN_email=support@wault.pw \
+		--build-arg HUGO_LANGUAGES_EN_yandexMetrics=87936217 \
+		--build-arg HUGO_LANGUAGES_EN_googleAnalytics=G-93PBXT39JQ \
+		--build-arg HUGO_LANGUAGES_EN_cdnURL=https://d05331.wault.pw \
+		--build-arg HUGO_LANGUAGES_EN_baseURL=https://www.wault.pw \
+		--build-arg HUGO_LANGUAGES_EN_dnsPrefetch=https://d05331.wault.pw,https://cloud.wault.pw,https://mc.yandex.com,https://www.googletagmanager.com \
+		--build-arg HUGO_LANGUAGES_EN_preconnect=https://d05331.wault.pw,https://mc.yandex.com,https://www.googletagmanager.com \
+		--build-arg HUGO_LANGUAGES_EN_loginURL=https://cloud.wault.pw/ \
+		--build-arg HUGO_LANGUAGES_EN_joinURL=https://cloud.wault.pw/#/join \
+		\
 		--build-arg HUGO_LANGUAGES_RU_email=support@wault.ru \
 		--build-arg HUGO_LANGUAGES_RU_yandexMetrics=87936217 \
 		--build-arg HUGO_LANGUAGES_RU_googleAnalytics=G-93PBXT39JQ \
