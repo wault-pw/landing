@@ -53,7 +53,7 @@ languages:
           url: https://github.com/wault-pw
         - weight: 40
           name: Status
-          url: http://stats.uptimerobot.com/4Dn8VizL95
+          url: https://stats.uptimerobot.com/lV4X9c1gRN
 
   ru:
     baseURL: /
