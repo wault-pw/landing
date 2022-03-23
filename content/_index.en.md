@@ -5,7 +5,7 @@ aux: "Everything you send is encrypted locally by your browser before being sent
 The encryption key is your cryptographically-enhanced passphrase, which only you know."
 ---
 
-{{< image src="img/ui.ru.card-edit.png" alt="UI of the password manager Wault" shadow=true >}}
+{{< image src="img/ui.en.card-edit.png" alt="UI of the password manager Wault" shadow=true >}}
 
 Wault password manager is based on proven and reliable algorithms [encryption]({{< relref "/security/overview" >}}).
 You can view the [source code]({{< relref "/source" >}}) any time or launch Wault on your server.

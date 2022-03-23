@@ -8,7 +8,7 @@ security. You can use it to store and manage passwords, personal notes,
 alarm codes, credit and debit card data, PINs and software keys."
 ---
 
-{{< image src="img/ui.ru.login.png" shadow=true >}}
+{{< image src="img/ui.en.login.png" shadow=true >}}
 
 As passwords are the most common type of personal information that you need to protect,
 we have added many features to make Wault a great online password manager, thus solving the problem 
