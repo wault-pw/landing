@@ -26,8 +26,8 @@ build:
 		--build-arg HUGO_LANGUAGES_RU_joinURL=https://cloud.wault.ru/#/join \
 		\
 		--build-arg HUGO_LANGUAGES_ZH_email=support@wault.cn.com \
-		--build-arg HUGO_LANGUAGES_ZH_yandexMetrics= \
-		--build-arg HUGO_LANGUAGES_ZH_googleAnalytics= \
+		--build-arg HUGO_LANGUAGES_ZH_yandexMetrics=88039456 \
+		--build-arg HUGO_LANGUAGES_ZH_googleAnalytics=G-XVPZB1EE4T \
 		--build-arg HUGO_LANGUAGES_ZH_cdnURL=https://b7638.wault.cn.com \
 		--build-arg HUGO_LANGUAGES_ZH_baseURL=https://www.wault.cn.com \
 		--build-arg HUGO_LANGUAGES_ZH_dnsPrefetch=https://b7638.wault.cn.com,https://cloud.wault.cn.com,https://mc.yandex.com,https://www.googletagmanager.com \
