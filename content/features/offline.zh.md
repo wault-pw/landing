@@ -5,7 +5,7 @@ aux: "Once you start using Wault to protect your passwords and sensitive data,
 being online can make you feel uneasy. That's why we've included the autonomous copying from the very first version."
 ---
 
-{{< image src="img/ui.en.export.png" >}}
+{{< image src="img/ui.zh.export.png" >}}
 
 An offline copy allows you to save all the encrypted contents of your account to a local hard drive or email and 
 create a portable, read-only version of Wault to use when you are not connected to the Internet.

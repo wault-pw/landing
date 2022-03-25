@@ -7,7 +7,7 @@ aux: "Wault是一个在线存储单元，您可以在不被干扰的情况下存
 --安全性。它可以用于存储和管理密码、个人笔记、入侵者警报代码、信用卡和借记卡数据、PIN代码和程序密钥。"
 ---
 
-{{< image src="img/ui.ru.login.png" shadow=true >}}
+{{< image src="img/ui.zh.login.png" shadow=true >}}
 
 由于密码是最常见的个人信息保护类型，我们添加了许多功能使WAULT成为一个优秀的在线密码管理器，从而解决了“弱密码”问题。
 Wault的主要功能：

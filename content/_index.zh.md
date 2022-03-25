@@ -5,7 +5,7 @@ aux: "您发送的任何内容在传输到WAULT之前都由您的浏览器在本
 加密密钥是只有您自己知道的加强版密码短语。"
 ---
 
-{{< image src="img/ui.ru.card-edit.png" alt="密码管理器用户界面Wault" shadow=true >}}
+{{< image src="img/ui.zh.card-edit.png" alt="密码管理器用户界面Wault" shadow=true >}}
 
 WAULT密码管理器是已经过验证的可靠算法[加密]({{< relref "/security/overview" >}})
 您可以随时或在自己的服务器上运行WAULT以查看[源代码]({{< relref "/source" >}})
