@@ -89,3 +89,38 @@ languages:
         - weight: 40
           name: Статус
           url: https://stats.uptimerobot.com/4Dn8VizL95
+
+  zh:
+    baseURL: /
+    cdnURL: ""
+    yandexMetrics:
+    googleAnalytics:
+    email: support@example.com
+    description: Wault可以存储来自信用PIN码的密码和任何其他敏感数据。至个人笔记。您可以从任何地方和任何设备访问您的数据，
+    title: Wault密码管理器
+    copyright: Wault
+    location: Yandex.Cloud
+    menu:
+      header:
+        - name: 可能性
+          weight: 20
+          url: /features/overview/
+        - name: 安全
+          weight: 40
+          url: /security/overview/
+        - name: 源代码
+          weight: 50
+          url: /source/
+      footer:
+        - weight: 10
+          name: 使用条款
+          url: /legal/terms/
+        - weight: 20
+          name: 隐私性
+          url: /legal/privacy/
+        - weight: 30
+          name: GitHub
+          url: https://github.com/wault-pw
+        - weight: 40
+          name: 状态
+          url: https://stats.uptimerobot.com/4Dn8VizL95

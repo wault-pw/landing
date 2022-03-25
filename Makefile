@@ -5,8 +5,6 @@ VERSION:=$(shell cat VERSION)
 build: export TAG=$(VERSION)
 build:
 	docker build --no-cache -f ./Dockerfile -t ${REGISTRY_NAME}:${TAG} \
-		--build-arg HUGO_DISABLELANGUAGES=cn \
-		\
 		--build-arg HUGO_LANGUAGES_EN_email=support@wault.pw \
 		--build-arg HUGO_LANGUAGES_EN_yandexMetrics=88004695 \
 		--build-arg HUGO_LANGUAGES_EN_googleAnalytics=G-YF1K8JKP40 \
@@ -26,6 +24,16 @@ build:
 		--build-arg HUGO_LANGUAGES_RU_preconnect=https://a4f523.wault.ru,https://mc.yandex.com,https://www.googletagmanager.com \
 		--build-arg HUGO_LANGUAGES_RU_loginURL=https://cloud.wault.ru/ \
 		--build-arg HUGO_LANGUAGES_RU_joinURL=https://cloud.wault.ru/#/join \
+		\
+		--build-arg HUGO_LANGUAGES_ZH_email=support@wault.cn.com \
+		--build-arg HUGO_LANGUAGES_ZH_yandexMetrics= \
+		--build-arg HUGO_LANGUAGES_ZH_googleAnalytics= \
+		--build-arg HUGO_LANGUAGES_ZH_cdnURL=https://b7638.wault.cn.com \
+		--build-arg HUGO_LANGUAGES_ZH_baseURL=https://www.wault.cn.com \
+		--build-arg HUGO_LANGUAGES_ZH_dnsPrefetch=https://b7638.wault.cn.com,https://cloud.wault.cn.com,https://mc.yandex.com,https://www.googletagmanager.com \
+		--build-arg HUGO_LANGUAGES_ZH_preconnect=https://b7638.wault.cn.com,https://mc.yandex.com,https://www.googletagmanager.com \
+		--build-arg HUGO_LANGUAGES_ZH_loginURL=https://cloud.wault.cn.com/ \
+		--build-arg HUGO_LANGUAGES_ZH_joinURL=https://cloud.wault.cn.com/#/join \
 		.
 	docker tag ${REGISTRY_NAME}:${TAG} ${REGISTRY_NAME}:latest
 
