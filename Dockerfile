@@ -1,5 +1,5 @@
 ARG BUILD=klakegg/hugo
-ARG ISO=nginx
+ARG ISO=nginx:alpine
 
 FROM ${BUILD} as build
 ARG HUGO_DISABLELANGUAGES

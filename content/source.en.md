@@ -12,8 +12,8 @@ algorithm and its implementation. Claude Shannon restated it as «the enemy know
 
 ## Technology stack
 
-Server application of the password manager «alice» was written on go, сlient web-application
-«eva» is written on TypeScript with the use of data libraries Nuxt and VueJS. Communication between
+Server application of the password manager was written in go, web-application
+called "eva" is written in TypeScript with Nuxt and VueJS. Communication between
 client and the server is carried out via the REST API protocol using Google Protocol Buffers.
 The application uses a PostgreSQL database.
 
