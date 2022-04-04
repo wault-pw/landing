@@ -18,5 +18,5 @@ client and the server is carried out via the REST API protocol using Google Prot
 The application uses a PostgreSQL database.
 
 The source code of the application and all the libraries is available at [GitHub](https://github.com/wault-pw).
-Besides, all the services are available as separate [Docker](https://github.com/orgs/wault-pw/packages) containers
+Besides, all the services are available as separate [Docker](https://hub.docker.com/r/shlima/wault) containers
 that can be launched locally or on one's server.

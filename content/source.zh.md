@@ -12,4 +12,4 @@ aux: "在密码学的世界里，开源被认为是安全的关键：公共安�
 密码管理器“Alice”服务应用程序是用go编写的，Web客户端应用程序“eva”是用Nuxt和VueJS编写的。
 客户端和服务器之间的通信是通过谷歌Protocol Buffers的REST API协议进行的。应用程序使用PostgreSQL数据库。
 
-应用程序和所有库的源代码都可以访问[GitHub](https://github.com/wault-pw)。此外,所有服务器是可以在本地或在自己的服务器上的独立存储器运行[Docker](https://github.com/orgs/wault-pw/packages)。
+应用程序和所有库的源代码都可以访问[GitHub](https://github.com/wault-pw)。此外,所有服务器是可以在本地或在自己的服务器上的独立存储器运行[Docker](https://hub.docker.com/r/shlima/wault)。
